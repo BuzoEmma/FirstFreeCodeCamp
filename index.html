@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>first-project-freeCodeCamp</title>
+</head>
+<body>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        transition: 0.1s ease-in-out;
+    }
+    body{
+        width: 100%;
+        height: 100%;
+        top: 0;
+        margin: 0;
+        padding: 0;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+       background-image: linear-gradient(rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7)), url(assets/survey-form-background.jpeg);
+    }
+
+/* ......................................... */
+/* NAV BAR SECTION */
+/*...........................................*/
+
+    nav{
+        /* position: fixed; */
+        width: 100%;
+        /* margin-top: -60px; */
+  
+
+    }
+
+    #main-nav{
+        background-color: black;
+        padding-bottom:18px;
+
+    }
+    .logo{
+        width: 40px;
+        height: 40px;
+        background-color: white;
+        border-radius: 50%;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+    div span{
+        display: block;
+    }
+    .first-span{
+        margin-top: -40px;
+        margin-left: 60px;
+        color: whitesmoke;
+        
+    }
+    .first-span:hover{
+        color: rgba(255, 255, 255, 0.514);
+    }
+    .second-span, a{
+        margin-top: -18px;
+        margin-left: 30px;
+        color: rgb(114, 112, 112);
+        text-decoration: none;
+    }
+     .second-span, a:hover{
+        color: white;
+     }
+     .follow{
+         background-color: greenyellow;
+         border-radius: 5px;
+         width: 64px;
+         border-color: black;
+         color: black;
+         font-weight: bold
+     }
+     .follow:hover{
+         color: white;
+         background-color: green;
+         width: 68px;
+     }
+     .menu-bar{
+         width: 33px;
+         height: 30px;
+         background-color: white;
+         float: right;
+         display: none;
+     }
+    .heart-icon{
+        width: 40px;
+        height: 40px;
+        float: right;
+        margin-right: 283px;
+        margin-top: -40px;
+        border-radius: 50%;
+        background-color: white;
+    }
+    .section-nav{
+        float: right;
+        margin-top: -35px;
+        margin-right: 10px;
+    }
+    .images{
+        width: 40px;
+        height: 40px;
+        margin-top: -3px;
+        background-color: white;
+        float: right;
+        color: white;
+        border-radius: 50%;
+    }
+    .view{
+        width: 90px;
+        height: 35px;
+        text-transform: capitalize;
+        background-color: gray;
+        color: white;
+        border: black;
+        border-radius: 5px;
+    }
+    .view:hover{
+        background-color: rgb(184, 180, 180);
+    }
+    .sign{
+        background-color: greenyellow;
+        border-radius: 5px;
+        border-color: black;
+        color: black;
+        text-transform: capitalize;
+        width: 70px;
+        height: 35px;
+        border: black;
+        border-radius: 5px;
+    }
+    .sign:hover{
+        background-color: green;
+        color: white;
+    }
+    .log{
+        width: 50px;
+        margin-top: -29px;
+        height: 35px;
+        text-transform: capitalize;
+        background-color: gray;
+        color: white;
+        border: black;
+        border-radius: 5px;
+        margin-right: 8px;
+    }
+    .log:hover{
+        background-color: rgb(184, 180, 180);
+    }
+    /* ..................................... */
+    /* MAIN SECTION */
+    /* ...................................... */
+      h1{
+        
+         margin-top: 40px;
+          text-align: center;
+          font-size: 45px;
+          color: aliceblue;
+      }
+      #discription{
+        text-align: center;
+        color: aliceblue;
+        font-style: italic;
+      }
+    /* ...................................... */
+    /* FORM SECTION*/
+    /* ....................................... */
+    form{
+    width: 40%;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-items: center;
+    background-color: rgba(10, 10, 10, 0.651);
+    padding: 25px;
+    border-radius: 10px;
+    }
+    .form-div{
+        margin: 20px;
+        width: 90%;
+    }
+     p, label{
+        color: white;
+        text-transform: capitalize;
+        
+        
+    }
+    .form-control{
+        width: 100%;
+        height: 30px;
+        outline-color: blue;
+        border: 4px;
+        border-radius: 4px;
+        margin-top: 5px;
+        margin-left: -2px;
+    }
+    .lab{
+        font-size: 21px;
+
+    }
+    p{
+        font-size: 20px;
+    }
+    label{
+        font-size: 15px;
+        font-style: inherit;
+    }
+    .form-gruop, .clue{
+        display: inline;
+        font-size: 15px;
+        font-style: italic;
+    }
+    ::placeholder{
+        font-style: italic;
+        padding: 4px;
+        text-transform: capitalize;
+    }
+     select{
+        font-size: 14px;
+        font-style: italic;
+        padding: 1px;
+    }
+    textarea{
+       width: 94%;
+        height: 60px;
+        padding: 15px;
+        resize: none;
+        margin-top: 5px;
+        border-radius: 5px;
+        outline: none;
+    }
+    textarea::-webkit-scrollbar{
+        width: 0px;
+    }
+     #submit{
+        color: white;
+        background-color: rgba(54, 250, 54, 0.836);
+        width: 100%;
+
+        margin-left: 0;
+        margin-right: 0;
+        height: 30px;
+        text-transform: capitalize;
+        margin-top: 20px;
+        border: black;
+        border-radius: 5px;
+    }
+    #submit:hover{
+        padding: 5px;
+        font-size: 15px;
+        background-color: rgb(47, 255, 99);
+    }
+
+    /* ......................... */
+    /* MEDIA QUARY */
+    /* .......................... */
+@media (max-width: 654px){
+    .heart-icon, .section-nav{
+        display: none;
+    }
+}
+@media (max-width: 654px) {
+    .menu-bar{
+        display: block;
+        margin-top: -30px;
+        margin-right: 20px;
+    }
+}
+
+</style>
+    <nav>
+       <div id="main-nav">
+        <div>
+            <img src="assets/logo.svg" alt="logo" class="logo">
+           <span>
+            <span class="first-span">FCC: Survey Form</span><br>
+            <span class="second-span"><a href="#">FreeCodeCamp.org </a><button class="follow">+ follow</button></span> 
+           </span>
+        </div>
+        <div class="bar-div">
+            <img src="assets/menu-bars-svgrepo-com.svg" alt="menu-bar" class="menu-bar">
+            <img src="assets/heart-icon.svg" alt="heart" class="heart-icon">
+            <div class="section-nav">
+                <button class="view ">view editor</button>
+                <button class="sign">sign up</button>
+                <button class="log">log in</button>
+                  <img src="assets/logo.svg" alt="images" class="images">
+            </div>
+        </div>
+       </div>
+    </nav>
+    <main>
+        <h1 id="title">freecodecamp Survey Form</h1>
+        <p id="discription">thank you for taking tine to help us improve the platform</p>
+       <form action="#" method="post" id="survey-form">
+           <div class="form-div">
+            <div class="form-group">
+                <label for="name-label" class="lab">name</label><br>
+                <input type="text" name="name" placeholder="enter your name" class="form-control" id="name" required>
+            </div><br>
+            <div class="form-group">
+                <label for="email-label" class="lab">Email</label><br>
+                <input type="email" name="email" placeholder="enter your email" class="form-control" id="email" required>
+            </div><br>
+            <div class="form-group">
+                <label for="number-label" class="lab">age <span class="clue">(optional)</span></label>
+                <input type="age" name="age" placeholder="age" class="form-control" id="number" min="0" max="99">
+            </div><br>
+            <div class="form-group">
+                <label for="option" class="lab">which option best describes your current role?</label><br>
+                <select name="role" id="dropdown" class="form-control">
+                    <option disabled selected value="">Select current role</option>
+                    <option value="student">student</option>
+                    <option value="full-job">full time job</option>
+                    <option value="full-time">full time learner</option>
+                    <option value="prefer">prefer to stay</option>
+                    <option value="others">others</option>
+                </select>
+            </div><br>
+            <div class="form-group">
+                <p>would you recommend freeCodeCamp to a friend?</p>
+            </div>
+            <div>
+            <label>
+                    <input type="radio" name="user-recommend" value="definitely" class="input-radio" checked>
+                    definitely</label>
+            </div>
+            <div>
+            <label>
+                    <input type="radio" name="user-recommend" value="maybe" class="input-radio">
+                    maybe</label>
+            </div>
+            <div>
+            <label>
+                    <input type="radio" name="user-recommend" value="not sure" class="input-radio">
+                    not sure</label>
+            </div><br>
+            <div class="form-group">
+                <p>what is your favourite feature of freeCodeCamp</p>
+                <select name="mostLike" id="most-like" class="form-control" required>
+                    <option disabled selected value>Select an option</option> 
+                    <option value="challenges">Challenges</option>
+                    <option value="project">Project</option>
+                    <option value="community">Community</option>
+                    <option value="openSource">Open Source</option>
+                </select>
+            </div><br>
+            <div class="form-group">
+                <p>what would you like to see improved? <span class="clue">(check all that apply)</span></p>
+            
+                <label for="front-end">
+                    <input type="checkbox" value="front-end-projects" name="prefer" class="input-checkbox">
+                fron-end projects</label>
+            </div>
+            <div>
+            <label for="back-end">
+                    <input type="checkbox" value="back-end-projects" name="prefer" class="input-checkbox">
+                back-end projects</label>
+            </div>
+            <div>
+            <label for="data-visalization">
+                    <input type="checkbox" value="data-visalization" name="prefer" class="input-checkbox">
+                data visualization </label>
+            </div>
+            <div>
+            <label for="challenges">
+                    <input type="checkbox" value="challenges" name="prefer" class="input-checkbox">
+                challenges</label>
+            </div>
+            <div>
+            <label for="openSource">
+                    <input type="checkbox" value="open-source-community" name="prefer" class="input-checkbox">
+                open source community</label>
+            </div>
+            <div>
+                <label for="gitter-help-rooms">
+                    <input type="checkbox" value="gitter-help-rooms" name="prefer" class="input-checkbox">
+                gitter help rooms</label>
+            </div>
+            <div>
+            <label for="videos">
+                    <input type="checkbox" value="videos" name="prefer" class="input-checkbox">
+                videos</label>
+            </div>
+            <div>
+            <label for="city meetups">
+                    <input type="checkbox" value="city-meetups" name="prefer" class="input-checkbox">
+                city meetups</label>
+            </div>
+            <div>
+            <label for="wiki">
+                    <input type="checkbox" value="wiki" name="prefer" class="input-checkbox">
+                wiki</label>
+            </div>
+            <div>
+            <label for="forum">
+                    <input type="checkbox" value="forum" name="prefer" class="input-checkbox">
+                forum</label>
+            </div>
+            <div>
+            <label for="additonlaCourses">
+                    <input type="checkbox" value="additional-courses" name="prefer" class="input-checkbox">
+                additional courses</label>
+            </div><br>
+            <div>
+                <p>any comment or suggestion?</p>
+                <textarea name="comments" id="comments" cols="30" rows="10" class="input-textarea" placeholder="enter your comment....."></textarea>
+            </div>
+            <button id="submit">submit</button>
+           </div>
+        </form>
+    </main>
+</body>
+</html>
